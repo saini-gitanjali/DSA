@@ -1,12 +1,7 @@
+//using dp top down approach
 #include<iostream>
 using namespace std;
 
-
- // } Driver Code Ends
-
-
-// Returns the maximum value that  
-// can be put in a knapsack of capacity W 
 int knapSack(int W, int wt[], int val[], int n) 
 { 
     int k[n+1][W+1];
@@ -27,13 +22,6 @@ int knapSack(int W, int wt[], int val[], int n)
     }
     return k[n][w];
 }
-
-
-
-
-
-// { Driver Code Starts.
-
 int main()
  {
     //taking total testcases

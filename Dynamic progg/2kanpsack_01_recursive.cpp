@@ -1,12 +1,6 @@
+//recursive approach
 #include<iostream>
 using namespace std;
-
-
- // } Driver Code Ends
-
-
-// Returns the maximum value that  
-// can be put in a knapsack of capacity W 
 int knapSack(int W, int wt[], int val[], int n) 
 { 
     if (n == 0 || W == 0) 
