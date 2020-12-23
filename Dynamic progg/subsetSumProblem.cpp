@@ -2,10 +2,7 @@
 
 #include <iostream>
 using namespace std;
-
-
-
-    bool isSubset(int n, int arr[], int sum)
+   bool isSubset(int n, int arr[], int sum)
     {
         cout<<"solving";
         int t[1000][1000];
