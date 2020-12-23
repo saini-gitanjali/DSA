@@ -4,7 +4,7 @@
 using namespace std;
    bool isSubset(int n, int arr[], int sum)
     {
-        cout<<"solving";
+        //cout<<"solving";
         int t[1000][1000];
         for (int i = 0; i <= n; i++)
         t[i][0] = true;
