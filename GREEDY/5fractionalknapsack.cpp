@@ -1,6 +1,9 @@
 // problem link: https://practice.geeksforgeeks.org/problems/fractional-knapsack-1587115620/1#
 // { Driver Code Starts
-#include <bits/stdc++.h>
+#include <iostream>
+#include<algorithm>
+#include<iomanip>
+
 using namespace std;
 
 struct Item{
@@ -58,7 +61,7 @@ int main()
 		int n, W;
 		cin>>n>>W;
 		
-		Item arr[n];
+		Item *arr=new Item[n];
 		//value and weight of each item
 		for(int i=0;i<n;i++){
 			cin>>arr[i].value>>arr[i].weight;
