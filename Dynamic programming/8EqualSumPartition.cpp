@@ -13,14 +13,14 @@ using namespace std;
 
 class Solution{
 public:
-   bool subsetSum(int n, int arr[], int sum)
+bool subsetSum(int n, int arr[], int sum)
     {
         bool t[n+1][sum+1];
        // memset(t, 0, sizeof(t));
         
         for (int i = 0; i <= n; i++)
         t[i][0] = true;
-         for (int i = 1; i <= sum; i++)
+        for (int i = 1; i <= sum; i++)
         t[0][i] = false;
         
         for(int i=1; i<=n; i++)
@@ -45,7 +45,7 @@ public:
             return false;
         
         else if(sum%2==0)
-             return subsetSum(n, arr, target);
+            return subsetSum(n, arr, target);
         
     }
 };
