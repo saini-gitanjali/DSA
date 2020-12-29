@@ -79,7 +79,7 @@ int main(){
                     case 2: x = st.pop();
                             cout<<x;
 							break;
-                   case 3: if(st.isempty())
+                    case 3: if(st.isempty())
                                 cout<<"\n stack empty";
                             else 
                                 cout<<"\n stack not empty";
