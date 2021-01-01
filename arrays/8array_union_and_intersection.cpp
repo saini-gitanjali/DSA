@@ -1,3 +1,4 @@
+//problem link: https://practice.geeksforgeeks.org/problems/union-of-two-arrays/0
 #include<iostream>
 #include<algorithm>
 #include<set>
@@ -11,6 +12,7 @@ void Union(vector<int> v1, vector<int> v2, int n,int m){
         s.insert(v2[i]);
     cout<<s.size()<<endl;
 }
+
 void intersection(vector<int> v1, vector<int>v2,int n, int m)
 {
     set<int> s;
@@ -27,7 +29,7 @@ void intersection(vector<int> v1, vector<int>v2,int n, int m)
 }
 using namespace std;
 int main()
- {
+{
 	//code
 	int t;
 	cin>>t;
@@ -35,11 +37,12 @@ int main()
 	    int n, m, k;
 	    cin>>n>>m;
 	    vector<int> v1, v2;
-	    for(int i=0;i<n;i++){
+	    for(int i=0;i<n;i++)
+		{
 	        cin>>k;
 	        v1.push_back(k);
 	    }
-	      for(int i=0;i<m;i++){
+	    for(int i=0;i<m;i++){
 	        cin>>k;
 	        v2.push_back(k);
 	    }
