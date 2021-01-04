@@ -14,7 +14,7 @@ class heap{
         void print();
         int leftchild(int n);
         int rightchild(int n);
-        void heapify( int n);
+        void heapify(int i);
         void deleteEl(int el);
 };
 
@@ -43,24 +43,41 @@ void heap :: print(){
         cout<<arr[i]<<" ";
 }
 
-int heap :: leftchild(int n){
+/*int heap :: leftchild(int n){
     return 2*n+1;
 }
 int heap :: rightchild(int n){
     return 2*n+2;
 }
-
+*/
 void heap :: deleteEl(int el){
-    int temp;
+    int temp = arr[curr-1];
     for(int i=0; i<curr; i++)
         if(el == arr[i])
         {
-            
+            swap(arr[i], arr[curr-1]);
         }
-
+        curr--;
+        cout<<"element deleted";
+        heapify(0);
 }
-void heap :: heapify(int n){
 
+void heap :: heapify(int i)
+{
+    cout<<"heapifying";
+    int l = 2*i + 1;
+    int r = 2*i + 2;
+    int max;
+    if(l <curr && arr[i] < arr[l])
+        max = l;
+    else 
+        max = i;
+    if(r <curr && arr[i] < arr[r])
+        max = r;
+    if(max != i){
+        swap(arr[i], arr[max]);
+    heapify(max);
+    }
 }
 
 int main(){
@@ -72,6 +89,10 @@ int main(){
         cin>>data;  
         h.buildheap(data);
     }
+    h.print();
+    int el;
+    cin>>el;
+    h.deleteEl(el);
     h.print();
     return 0;
 
