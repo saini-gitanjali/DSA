@@ -97,6 +97,7 @@ int heap:: getMax()
 {
     return arr[0];
 }
+
 int main(){
     int n, data;
     cout<<"\nenter size of heap : ";
@@ -131,18 +132,5 @@ int main(){
         cout<<"\n enter 1 to continue : ";
         cin>>choice2;
     }while(choice2==1);
-    /*
-    for(int i=0;i<n; i++)
-    {
-        cin>>data;  
-        h.buildheap(data);
-    }
-    h.print();
-    int el;
-    cin>>el;
-    h.deleteEl(el);
-    h.print();
-    cout<<h.getMax();
-    */return 0;
-
+    return 0;
 }
