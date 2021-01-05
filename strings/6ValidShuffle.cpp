@@ -1,3 +1,6 @@
+//Check if a string is a valid shuffle of two other strings
+// str1 = xy , str2 = 12, result = x12y gives output true
+// result = y12x gives out false as the order of characters of str1 is reverses , y appears before x
 #include<iostream>
 #include<string>
 
@@ -17,6 +20,7 @@ bool isValidShuffle(string str1, string str2, string result){
     }
     return true;
 }
+
 int main(){
     string s1, s2, result;
     getline(cin, s1);
