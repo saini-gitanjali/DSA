@@ -100,6 +100,7 @@ struct Node
 void splitList(Node *head, Node **head1_ref, Node **head2_ref)
 {
     Node * slow, *fast;
+    
     slow = fast = head;
     
     while(fast->next!=head && fast->next->next!=head)
