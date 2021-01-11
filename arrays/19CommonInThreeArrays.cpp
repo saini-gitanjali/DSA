@@ -12,9 +12,9 @@ using namespace std;
 class Solution
 {
     public:    
-       vector <int> commonElements (int a[], int b[], int c[], int n1, int n2, int n3)
+    vector <int> commonElements (int a[], int b[], int c[], int n1, int n2, int n3)
         {
-            vector<int> ans;
+             vector<int> ans;
             int i=0, j=0, k=0; 
             while(i<n1&&j<n2&&k<n3)
             {

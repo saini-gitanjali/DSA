@@ -1,3 +1,4 @@
+problme link:
 //using dp top down approach
 #include<iostream>
 using namespace std;
@@ -13,7 +14,7 @@ int knapSack(int W, int wt[], int val[], int n)
             if(i==0||j==0)
                 k[i][j]=0;
             if(wt[i-1]<j){
-                k[i][j]=max(val[i-1]+k[i-1][j-wt[i-1], k[i-1][j]);
+                k[i][j]=max(val[i-1]+k[i-1][j-wt[i-1]], k[i-1][j]);
             }
             else
             k[i][j] = k[i-1][j];
