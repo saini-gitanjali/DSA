@@ -130,20 +130,16 @@ struct Node {
 */
 
 // return true if the given tree is a BST, else return false
-bool BSTutil(Node *root, int prev)
+bool BSTutil(Node *root, int min, int max)
 {
     if(!root)
     return 1;
-    
-        if(!BSTutil(root->left, prev))
-            return 0;
-        if(root->data <= prev)
-            return 0;
-        prev = root->data;
-        return BSTutil(root->right, prev);
+    if(root->data<min||root->data>max)
+        return 0;
+    return BSTutil(root->left, min, root->data-1) && BSTutil(root->right, root->data-1, max);
 }
 bool isBST(Node* root) {
-    return BSTutil(root, INT_MIN);
+    return BSTutil(root, INT_MIN, INT_MAX);
 }
 
 
