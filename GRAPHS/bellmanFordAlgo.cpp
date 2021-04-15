@@ -8,18 +8,29 @@
 
 using namespace std;
 
-unordered_map<int, list<pair<int, int> > > adjList;
+unordered_map<int, pair<int, int>> adjList;
 unordered_map <int, int> dist;
 void addEdge(int src, int dest, int weight, bool bidirectional = true)
 {
-    adjList[src].push_back(make_pair(dest, weight));
+    adjList[src] = make_pair(dest, weight);
     if(bidirectional)
-        adjList[dest].push_back(make_pair(src, weight));
+        adjList[dest] = make_pair(src, weight);
 }
 
-void bellmanFord(int V, int src)
+void bellmanFord(int V, int E, int src)
 {
-    
+    //    int *dist = new int[V];
+    //    for(int i=0; i < V; i++)
+    //         dist[i] = 0;
+    //     dist[src] = 0;
+    // for(int i = 1; i<V-1; i++)
+    //     for(int j = 0; j < E; j++)
+    //     {
+    //         int u = adjList[j].first;
+    //         int v = adjList[j].second;
+
+
+    //     }
 }
 
 void print(int V) {  
@@ -47,6 +58,7 @@ int main(){
     int src;
     int *dist = new int[V];
         cin>>src;
-    bellmanFord( V, src);
+        cout<<adjList[0].first<<" "<<adjList[0].second;
+    bellmanFord( V, E, src);
     return 0;
 }

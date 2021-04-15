@@ -22,7 +22,7 @@ void dijkstra(int V, int src)
     //first element will be distance as elements will be sorted according to fist element of pair
     for(auto j: adjList) 
         dist[j.first] = INT16_MAX;
-    set<pair<int, int> > s;         //set to find\ node at a min distance from source
+    set<pair<int, int> > s;         //set to find node at a min distance from source
     // initialization
     dist[src] = 0;      //distance of any node from itself is zero
     s.insert(make_pair(0, src)); 
@@ -64,7 +64,6 @@ int main(){
     cin>>V>>E;    
     bool bidirectional;
     cin>>bidirectional;
-
         for(int i=0; i<E; i++)
         {
             cin>>s>>d>>w;
@@ -72,7 +71,7 @@ int main(){
         }
     cout<<"\n The adjacency list of graph is: \n";
     print(V);
-    int src;
+    int src; 
     int *dist = new int[V];
         cin>>src;
     dijkstra( V, src);

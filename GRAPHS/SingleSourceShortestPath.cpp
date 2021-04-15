@@ -42,6 +42,7 @@ int* SingleSourceShortestPath(vector<int> adjList[], int V, int src, int dist[])
     }
     return dist;
 }
+
 void print(vector<int> vec[], int V){
     
     for(int i=0; i<V; i++)
@@ -57,6 +58,7 @@ int main(){
     
     int V=10000,E;
     cin>>V;
+    
     vector<int> adj_list[V];
     cin>>E;
     int s, d;
