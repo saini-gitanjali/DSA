@@ -42,7 +42,7 @@ int main() {
         long long i, a[n];
         for (i = 0; i < n; i++) {
             cin >> a[i];
-        }
+        }  
         Solution ob;
         cout << ob.minCost(a, n) << endl;
     }
