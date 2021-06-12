@@ -36,7 +36,7 @@ void bellmanFord(int V, int E, int src)
 void print(int V) {  
     for(auto x: adjList) {
         cout<<x.first<<"-> ";          //display soruce node for edge
-        for(auto l: x.second)                   //iterate over list in map for dest node and weight of that edge
+          for(auto l: x.second)                   //iterate over list in map for dest node and weight of that edge
             cout<<"("<<l.first<<" "<<l.second<<"), ";             //l.first = dest node, l.second = weight of src and dest
         cout<<endl;
     }
