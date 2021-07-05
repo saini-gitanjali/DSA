@@ -9,7 +9,12 @@ class Solution
 {
     public:
     //Function to find the number of islands.
-    void dfs(vector<vector<char>> &grid, int i, int j, vector<vector<int>> &vis, int n,int m)
+         dfs(grid, i-1, j-1, vis, n, m );
+            dfs(grid, i+1, j-1, vis, n, m );
+            dfs(grid, i-1, j+1, vis, n, m );
+            
+        }
+    }void dfs(vector<vector<char>> &grid, int i, int j, vector<vector<int>> &vis, int n,int m)
     {
         if(i < 0 || j<0 || i >=n || j>=m)
             return ;
@@ -26,12 +31,7 @@ class Solution
             dfs(grid, i, j+1, vis, n, m );
             dfs(grid, i, j-1, vis, n, m );
             dfs(grid, i+1, j+1, vis, n, m );
-            dfs(grid, i-1, j-1, vis, n, m );
-            dfs(grid, i+1, j-1, vis, n, m );
-            dfs(grid, i-1, j+1, vis, n, m );
-            
-        }
-    }
+       
     
     int numIslands(vector<vector<char>>& grid) 
     {
